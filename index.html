@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Sadia Shahzad | Literary Portfolio & Author Website</title>
+  <meta name="description" content="Welcome to the literary world of Sadia Shahzad, mass communication scholar and author. Explore crime thrillers, mysteries, articles, and fables.">
+  <meta name="keywords" content="Sadia Shahzad, author portfolio, novelist, writing portfolio, fables, essayist, Pakistani literature, Karachi writer">
+  <meta name="author" content="Sadia Shahzad">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Sadia Shahzad | Literary Portfolio">
+  <meta property="og:description" content="Explore novels, fables, and articles in the digital literary sanctuary of author Sadia Shahzad.">
+  <meta property="og:image" content="assets/images/cover_emerald.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon placeholder (can be custom logo) -->
+  <link rel="icon" type="image/png" href="assets/images/cover_threads.png">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP Animation Library (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- 1. INTRO / LOADING ANIMATION -->
+  <div id="intro-screen" aria-hidden="false">
+    <div class="intro-content" id="intro-content">
+      <p class="intro-subtitle">Welcome to the Literary World of</p>
+      <h1 class="intro-title">Sadia Shahzad</h1>
+      <div class="intro-divider"></div>
+      <p class="intro-subtitle" style="font-size: 0.95rem; color: var(--color-gold-light);">Novels • Novelettes • Fables • Articles</p>
+    </div>
+  </div>
+
+  <!-- Mobile Hamburger Menu Button -->
+  <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+    <i data-lucide="menu"></i>
+  </button>
+
+  <!-- Main App Layout -->
+  <div class="app-container">
+    
+    <!-- 3. NAVIGATION (FIXED SIDEBAR - RIGHT SIDE) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <h2 class="sidebar-logo-text" style="font-size: 1.15rem; letter-spacing: 0.5px; color: var(--color-text-light);">Literary World of</h2>
+        <p class="sidebar-logo-sub" style="font-size: 1.35rem; color: var(--color-gold); font-family: var(--font-heading); text-transform: none; opacity: 1; letter-spacing: 0.5px; margin-top: 2px;">Sadia Shahzad</p>
+      </div>
+
+      <nav aria-label="Sidebar navigation">
+        <ul class="sidebar-menu">
+          <li class="sidebar-item active" data-tab="home">
+            <a href="#home" id="nav-home">
+              <i data-lucide="home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="sidebar-item" data-tab="portfolio">
+            <a href="#portfolio" id="nav-portfolio">
+              <i data-lucide="book-open"></i>
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li class="sidebar-item" data-tab="announcements">
+            <a href="#announcements" id="nav-announcements">
+              <i data-lucide="megaphone"></i>
+              <span>Announcements</span>
+            </a>
+          </li>
+          <li class="sidebar-item" data-tab="contact">
+            <a href="#contact" id="nav-contact">
+              <i data-lucide="mail"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <footer class="sidebar-footer">
+        <p>&copy; 2026 Sadia Shahzad.</p>
+        <p style="margin-top: 5px; opacity: 0.6; font-size: 0.65rem;">All rights reserved.</p>
+      </footer>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="main-content">
+
+      <!-- ==========================================
+           2. HOMEPAGE SECTION
+           ========================================== -->
+      <section id="home-section" class="app-section active">
+        
+        <!-- Auto-playing Carousel Slider -->
+        <div class="slider-container" id="homepage-slider">
+          <button class="slider-arrow prev" id="slider-prev" aria-label="Previous Slide">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="slider-arrow next" id="slider-next" aria-label="Next Slide">
+            <i data-lucide="chevron-right"></i>
+          </button>
+          
+          <div class="slider-slides-wrapper" id="slides-wrapper">
+            <!-- Dynamic slides injected by app.js -->
+          </div>
+          
+          <div class="slider-dots" id="slider-dots">
+            <!-- Dynamic dots injected by app.js -->
+          </div>
+        </div>
+
+        <!-- About Section (Open Book) -->
+        <div class="about-section">
+          <header class="section-header" style="margin-bottom: 2rem;">
+            <h2>Read About Sadia Shahzad</h2>
+            <div class="section-header-decoration">
+              <span class="line"></span>
+              <i data-lucide="feather"></i>
+              <span class="line"></span>
+            </div>
+          </header>
+
+          <!-- 3D Book Container -->
+          <div class="book-viewport">
+            <div class="book" id="about-book">
+              <!-- Central 3D spine shadow -->
+              <div class="book-spine-line"></div>
+              
+              <!-- Hard-cover bindings -->
+              <div class="book-cover left"></div>
+              <div class="book-cover right"></div>
+
+              <!-- Static Left Page (Author Portrait & Title Page) -->
+              <div class="book-page left-static">
+                <div class="bio-title-page">
+                  <img src="assets/images/author.png" alt="Sadia Shahzad Portrait" class="bio-portrait">
+                  <h3 class="bio-author-name">Sadia Shahzad</h3>
+                  <p class="bio-author-title">Author & Essayist</p>
+                  <p style="font-size: 0.8rem; font-style: italic; opacity: 0.7; max-width: 80%;">"Writing is the thread that binds the ephemeral to the eternal."</p>
+                </div>
+              </div>
+
+              <!-- Turning Page Sheets (Dynamically turned in 3D by app.js) -->
+              <div class="turning-sheet" id="sheet-0" data-index="0">
+                <div class="sheet-side front">
+                  <h3 class="bio-subtitle">The Voice & The Pen</h3>
+                  <p class="bio-paragraph">I’m Sadia Shahzad, a Mass Communication student at a federal university, specializing in Broadcast Media, Film, and Theatre. Writing is my passion — especially crime thrillers, suspense, murder mysteries, and social commentaries.</p>
+                  <p class="bio-paragraph">For me, media and literature are powerful vessels to bring awareness and trigger positive change in society, using characters to reflect our deepest realities.</p>
+                </div>
+                <div class="sheet-side back">
+                  <h3 class="bio-subtitle">Literary Collections</h3>
+                  <p class="bio-paragraph">I’ve written an afsana, <i>Intezaar</i>, which delves deep into the concepts of sacrifice and consequence, an article, <i>Azadi aik Naymat</i>, exploring the true value and gift of Pakistan, and an Eid novelette, <i>Eid e Vasl</i>, focusing on family bonds and emotional ties.</p>
+                </div>
+              </div>
+
+              <div class="turning-sheet" id="sheet-1" data-index="1">
+                <div class="sheet-side front">
+                  <h3 class="bio-subtitle">Current Works</h3>
+                  <p class="bio-paragraph">I’m currently working on my novel, <i>Aas</i>, which is a crime thriller that explores societal injustice and power dynamics, along with another novelette that focuses on justice, media ethics, and pressing social issues.</p>
+                </div>
+                <div class="sheet-side back">
+                  <h3 class="bio-subtitle">Inspirations</h3>
+                  <p class="bio-paragraph">Reading and reflecting on the different perspectives of life is what inspires my work. For me, stories are not just a form of expression, but a way to hold up a mirror to the world.</p>
+                  <p class="bio-paragraph">I hope this digital library serves as a cozy sanctuary for you. Feel free to explore my portfolios, download articles, read reviews, or send a direct message.</p>
+                  <div class="bio-signature">Sadia Shahzad</div>
+                </div>
+              </div>
+
+              <!-- Static Right Page (Inside back cover) -->
+              <div class="book-page right-static">
+                <div class="bio-title-page" style="justify-content: center; height: 100%;">
+                  <i data-lucide="book" style="color: var(--color-gold); font-size: 2.2rem; margin-bottom: 1.5rem; width: 45px; height: 45px;"></i>
+                  <h3 class="bio-author-name" style="font-size: 1.5rem; font-family: var(--font-subheading);">Enter the Library</h3>
+                  <p style="font-size: 0.88rem; max-width: 80%; line-height: 1.6; margin-bottom: 2rem; color: var(--color-text-dark); opacity: 0.85;">Explore the novel chapters, download articles, read moral fables, and write reviews in the Portfolio tab.</p>
+                  <button class="slide-btn" id="bio-explore-btn" style="transform: none; opacity: 1; font-size: 0.8rem; padding: 0.6rem 1.5rem;">Explore Portfolio</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Page Flip Navigation Panel -->
+          <div class="book-controls">
+            <button class="book-control-btn" id="book-prev" disabled>
+              <i data-lucide="arrow-left"></i>
+              <span>Back Page</span>
+            </button>
+            <span class="book-page-indicator" id="book-page-indicator">Page 1 of 3</span>
+            <button class="book-control-btn" id="book-next">
+              <span>Next Page</span>
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           4. PORTFOLIO SECTION
+           ========================================== -->
+      <section id="portfolio-section" class="app-section">
+        
+        <!-- Category Choice Grid View -->
+        <div id="portfolio-categories-view" class="portfolio-detail-view active">
+          <header class="section-header">
+            <h2>Portfolio Collection</h2>
+            <div class="section-header-decoration">
+              <span class="line"></span>
+              <i data-lucide="book-open"></i>
+              <span class="line"></span>
+            </div>
+          </header>
+          
+          <div class="portfolio-categories-grid">
+            <div class="category-card" data-category="Novels">
+              <div class="category-icon">
+                <i data-lucide="book"></i>
+              </div>
+              <h3 class="category-title">Novels</h3>
+              <p class="category-desc">Epic tales and atmospheric mysteries exploring family sagas, ancestral roots, and pre-partition historic secrets.</p>
+            </div>
+            
+            <div class="category-card" data-category="Novelettes">
+              <div class="category-icon">
+                <i data-lucide="scroll"></i>
+              </div>
+              <h3 class="category-title">Novelettes</h3>
+              <p class="category-desc">Focus narrative journeys set in misty coasts or alternate Victorian worlds, blends prose with poetry.</p>
+            </div>
+            
+            <div class="category-card" data-category="Articles">
+              <div class="category-icon">
+                <i data-lucide="file-text"></i>
+              </div>
+              <h3 class="category-title">Articles</h3>
+              <p class="category-desc">Critical review publications on post-colonial literature, modern fables, and essays addressing cultural identities.</p>
+            </div>
+            
+            <div class="category-card" data-category="Fables">
+              <div class="category-icon">
+                <i data-lucide="feather"></i>
+              </div>
+              <h3 class="category-title">Fables</h3>
+              <p class="category-desc">Short, elegant morality stories adapted from eastern classical traditions, written to instruct and inspire readers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected Category Books Grid Details View -->
+        <div id="portfolio-books-view" class="portfolio-detail-view">
+          <a href="#" class="back-to-categories" id="back-to-categories-btn">
+            <i data-lucide="arrow-left"></i>
+            <span>Back to Collections</span>
+          </a>
+          
+          <header class="section-header" style="margin-bottom: 3rem;">
+            <h2 id="current-category-title">Novels Collection</h2>
+            <div class="section-header-decoration">
+              <span class="line"></span>
+              <i data-lucide="layers"></i>
+              <span class="line"></span>
+            </div>
+          </header>
+          
+          <div class="books-grid" id="books-grid-container">
+            <!-- Dynamic 3D Book elements injected by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           5. ANNOUNCEMENTS SECTION
+           ========================================== -->
+      <section id="announcements-section" class="app-section">
+        <header class="section-header">
+          <h2>Announcements & Updates</h2>
+          <div class="section-header-decoration">
+            <span class="line"></span>
+            <i data-lucide="megaphone"></i>
+            <span class="line"></span>
+          </div>
+        </header>
+
+        <div class="announcements-container" id="announcements-container">
+          <!-- Dynamic announcement cards injected by app.js -->
+        </div>
+      </section>
+
+      <!-- ==========================================
+           6. CONTACT SECTION
+           ========================================== -->
+      <section id="contact-section" class="app-section">
+        <header class="section-header">
+          <h2>Get In Touch</h2>
+          <div class="section-header-decoration">
+            <span class="line"></span>
+            <i data-lucide="mail"></i>
+            <span class="line"></span>
+          </div>
+        </header>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Channels Info -->
+          <div class="contact-info">
+            <div>
+              <h3>Connect with Sadia</h3>
+              <p class="contact-lead-text" style="margin-top: 1rem;">
+                Whether you are a reader with thoughts to share, a publisher exploring collaborations, or a fellow writer wanting to discuss literature, I would love to hear from you. 
+              </p>
+            </div>
+            
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <i data-lucide="map-pin"></i>
+                <span>Karachi, Pakistan</span>
+              </div>
+              <div class="contact-detail-item">
+                <i data-lucide="mail"></i>
+                <span>diak51237@gmail.com</span>
+              </div>
+            </div>
+
+            <div>
+              <h3>Follow Her Journey</h3>
+              <div class="social-handles">
+                <!-- Open in new tab -->
+                <a href="https://www.instagram.com/writer.sadiakhan?igsh=MWtob2NwdWtrNHdtNA==" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
+                  <i data-lucide="instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                  <i data-lucide="linkedin"></i>
+                </a>
+                <!-- Open mail client -->
+                <a href="mailto:diak51237@gmail.com?subject=Inquiry%20from%20Portfolio" class="social-btn" aria-label="Email Client">
+                  <i data-lucide="mail"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Message Form (Redirects to WhatsApp wa.me API) -->
+          <div class="contact-form-container">
+            <h3 style="font-family: var(--font-subheading); font-size: 1.3rem; color: var(--color-emerald-deep); margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-gold-pale); padding-bottom: 0.5rem;">Send a Direct Message</h3>
+            
+            <form id="whatsapp-message-form" class="message-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Your Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="your.email@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message *</label>
+                <textarea id="contact-message" class="form-input" placeholder="Write your words here..." required></textarea>
+              </div>
+
+              <button type="submit" class="whatsapp-submit-btn">
+                <span>Send via WhatsApp</span>
+                <i data-lucide="send"></i>
+              </button>
+            </form>
+
+            <div class="submission-success-msg" id="form-success-alert">
+              <i data-lucide="check-circle" style="vertical-align: middle; margin-right: 5px;"></i>
+              <span>Generating link and redirecting to WhatsApp...</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Application logic orchestrator -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
